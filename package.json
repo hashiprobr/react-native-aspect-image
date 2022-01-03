@@ -1,0 +1,32 @@
+{
+  "name": "@hashiprobr/react-native-aspect-image",
+  "version": "1.0.0",
+  "description": "TODO",
+  "keywords": [
+    "JavaScript",
+    "React",
+    "React Native",
+    "React Native Component",
+    "Image",
+    "aspect-ratio",
+    "aspectRatio"
+  ],
+  "homepage": "https://github.com/hashiprobr/react-native-aspect-image#readme",
+  "bugs": {
+    "url": "https://github.com/hashiprobr/react-native-aspect-image/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashiprobr/react-native-aspect-image.git"
+  },
+  "license": "ISC",
+  "author": "Marcelo Hashimoto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-native": "^0.64.0"
+  }
+}
