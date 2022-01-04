@@ -10,6 +10,7 @@ function isPositive(value) {
 
 export default function AspectImage(props) {
     const [ratio, setRatio] = useState(0);
+    const [src, setSrc] = useState('');
 
     function onSuccess(width, height) {
         if (isPositive(width) && isPositive(height)) {
@@ -24,7 +25,8 @@ export default function AspectImage(props) {
     useEffect(() => {
         const { source } = props;
         if (typeof source === 'number') {
-            const { width, height } = Image.resolveAssetSource(source);
+            const { uri, width, height } = Image.resolveAssetSource(source);
+            setSrc(uri);
             onSuccess(width, height);
         } else {
             let uri;
@@ -33,15 +35,24 @@ export default function AspectImage(props) {
             } else {
                 uri = source.uri;
             }
+            setSrc(uri);
             Image.getSize(uri, onSuccess, onFailure);
         }
     }, [props.source]);
 
-    return ratio ? (
+    let placeholder;
+    if ('placeholder' in props) {
+        placeholder = props.placeholder;
+    } else {
+        placeholder = null;
+    }
+
+    return ratio && src ? (
         Platform.OS === 'web' ? (
             <WebAspectImage
                 {...props}
                 ratio={ratio}
+                source={{ uri: src }}
             />
         ) : (
             <Image
@@ -50,9 +61,10 @@ export default function AspectImage(props) {
                     ...props.style,
                     aspectRatio: ratio,
                 }}
+                source={{ uri: src }}
             />
         )
     ) : (
-        props.placeholder
+        placeholder
     );
 }

@@ -41,11 +41,11 @@ export default function WebAspectImage(props) {
     const [value, setValue] = useState(0);
 
     function calculateWidth(event) {
-        return event.layout.height * props.ratio;
+        return Math.round(event.layout.height * props.ratio);
     }
 
     function calculateHeight(event) {
-        return event.layout.width / props.ratio;
+        return Math.round(event.layout.width / props.ratio);
     }
 
     function setMaximumAspect(event) {
