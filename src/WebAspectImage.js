@@ -124,6 +124,8 @@ export default function WebAspectImage(props) {
         }
     }
 
+    delete style.aspectRatio;
+
     return (
         <Image
             {...props}
