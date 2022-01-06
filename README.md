@@ -18,13 +18,13 @@ Install
 With npm:
 
 ```
-npm install @hashiprobr/react-native-aspect-image
+npm install @hashiprobr/react-use-mount-and-update @hashiprobr/react-native-aspect-image
 ```
 
 With yarn:
 
 ```
-yarn add @hashiprobr/react-native-aspect-image
+yarn add @hashiprobr/react-use-mount-and-update @hashiprobr/react-native-aspect-image
 ```
 
 If using Expo, add the module to `webpack.config.js`:
