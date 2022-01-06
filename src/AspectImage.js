@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { Platform, Image } from 'react-native';
 
 import WebAspectImage from './WebAspectImage';
+
+import { useUpdate } from '@hashiprobr/react-use-mount-and-update';
 
 function isPositive(value) {
     return Number.isFinite(value) && value > 0;
@@ -22,7 +24,7 @@ export default function AspectImage(props) {
         throw error;
     }
 
-    useEffect(() => {
+    useUpdate(() => {
         const { source } = props;
         if (typeof source === 'number') {
             const { uri, width, height } = Image.resolveAssetSource(source);
