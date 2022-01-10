@@ -1,6 +1,6 @@
 {
   "name": "@hashiprobr/react-native-aspect-image",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A React Native Image that keeps the source aspect ratio",
   "keywords": [
     "JavaScript",
@@ -27,7 +27,7 @@
   },
   "peerDependencies": {
     "@hashiprobr/react-use-mount-and-update": "^1.0.3",
-    "react": "^17.0.0",
-    "react-native": ">=0.64.0"
+    "react": "^17.0.1",
+    "react-native": ">=0.64.3"
   }
 }

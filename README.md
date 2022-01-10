@@ -12,19 +12,31 @@ Please note that one of its dimensions must be set, either explicitly by
 the image will be 0x0.
 
 
+Peer dependencies
+-----------------
+
+``` json
+{
+    "@hashiprobr/react-use-mount-and-update": "^1.0.3",
+    "react": "^17.0.1",
+    "react-native": ">=0.64.3"
+}
+```
+
+
 Install
 -------
 
 With npm:
 
 ```
-npm install @hashiprobr/react-use-mount-and-update @hashiprobr/react-native-aspect-image
+npm install @hashiprobr/react-native-aspect-image
 ```
 
 With yarn:
 
 ```
-yarn add @hashiprobr/react-use-mount-and-update @hashiprobr/react-native-aspect-image
+yarn add @hashiprobr/react-native-aspect-image
 ```
 
 If using Expo, add the module to `webpack.config.js`:
@@ -38,7 +50,7 @@ module.exports = async function (env, argv) {
         babel: {
             dangerouslyAddModulePathsToTranspile: [
                 '@hashiprobr/react-native-aspect-image',
-            ]
+            ],
         },
     }, argv);
     return config;
