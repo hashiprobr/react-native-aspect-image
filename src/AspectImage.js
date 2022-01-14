@@ -11,8 +11,8 @@ function isPositive(value) {
 }
 
 export default function AspectImage(props) {
-    const [src, setSrc] = useState('');
     const [ratio, setRatio] = useState(0);
+    const [src, setSrc] = useState('');
 
     function onSuccess(width, height) {
         if (isPositive(width) && isPositive(height)) {
