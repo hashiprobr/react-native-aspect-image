@@ -37,8 +37,8 @@ function hasStretch(style, parentStyle) {
 }
 
 export default function WebAspectImage(props) {
-    const [column, setColumn] = useState(true);
     const [value, setValue] = useState(0);
+    const [column, setColumn] = useState(true);
 
     function calculateWidth(event) {
         return Math.round(event.layout.height * props.ratio);
@@ -55,25 +55,25 @@ export default function WebAspectImage(props) {
         const columnArea = width * event.layout.height;
         if (rowArea !== columnArea) {
             if (rowArea < columnArea) {
-                setColumn(true);
                 setValue(width);
+                setColumn(true);
             } else {
-                setColumn(false);
                 setValue(height);
+                setColumn(false);
             }
         }
     }
 
     function setColumnAspect(event) {
         const width = calculateWidth(event);
-        setColumn(true);
         setValue(width);
+        setColumn(true);
     }
 
     function setRowAspect(event) {
         const height = calculateHeight(event);
-        setColumn(false);
         setValue(height);
+        setColumn(false);
     }
 
     function onLayout({ nativeEvent }) {
