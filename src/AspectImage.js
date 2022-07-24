@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-import { Platform, Image } from 'react-native';
-
-import WebAspectImage from './WebAspectImage';
+import { Image } from 'react-native';
 
 import { useUpdate } from '@hashiprobr/react-use-mount-and-update';
 
@@ -50,22 +48,14 @@ export default function AspectImage(props) {
     }
 
     return ratio && src ? (
-        Platform.OS === 'web' ? (
-            <WebAspectImage
-                {...props}
-                ratio={ratio}
-                source={{ uri: src }}
-            />
-        ) : (
-            <Image
-                {...props}
-                style={{
-                    ...props.style,
-                    aspectRatio: ratio,
-                }}
-                source={{ uri: src }}
-            />
-        )
+        <Image
+            {...props}
+            style={{
+                ...props.style,
+                aspectRatio: ratio,
+            }}
+            source={{ uri: src }}
+        />
     ) : (
         placeholder
     );
