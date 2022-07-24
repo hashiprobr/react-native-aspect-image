@@ -78,6 +78,8 @@ Example
 -------
 
 ``` js
+import React from 'react';
+
 import { Text } from 'react-native';
 
 import AspectImage from '@hashiprobr/react-native-aspect-image';
