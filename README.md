@@ -17,9 +17,9 @@ Peer dependencies
 
 ``` json
 {
-    "@hashiprobr/react-use-mount-and-update": "^1.0.4",
-    "react": "^17.0.1",
-    "react-native": ">=0.64.3"
+    "@hashiprobr/react-use-mount-and-update": "1.0.5",
+    "react": "17.0.2",
+    "react-native": "0.68.2"
 }
 ```
 
