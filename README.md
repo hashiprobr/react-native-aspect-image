@@ -1,11 +1,6 @@
 react-native-aspect-image
 =========================
 
-**THIS REPOSITORY IS CLOSED** because
-[react-native-web](https://github.com/necolas/react-native-web) now [supports
-the aspect-ratio](https://github.com/necolas/react-native-web/issues/427)
-property.
-
 **A React Native Image that keeps the source aspect ratio**
 
 The `AspectImage` React Component is an `Image` that keeps the source aspect
