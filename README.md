@@ -1,6 +1,8 @@
 react-native-aspect-image
 =========================
 
+[PROJECT DISCONTINUED]
+
 **A React Native Image that keeps the source aspect ratio**
 
 The `AspectImage` React Component is an `Image` that keeps the source aspect
